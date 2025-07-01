@@ -1,13 +1,13 @@
-import { useGSAP } from "@gsap/react";
+import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import { SplitText } from "gsap/all";
-import { useRef } from "react";
-import { useMediaQuery } from "react-responsive";
+import {SplitText} from "gsap/all";
+import {useRef} from "react";
+import {useMediaQuery} from "react-responsive";
 
 const Hero = () => {
     const videoRef = useRef();
 
-    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const isMobile = useMediaQuery({maxWidth: 767});
 
     useGSAP(() => {
         const heroSplit = new SplitText(".title", {
@@ -46,9 +46,9 @@ const Hero = () => {
                     scrub: true,
                 },
             })
-            .to(".right-leaf", { y: 200 }, 0)
-            .to(".left-leaf", { y: -200 }, 0)
-            .to(".arrow", { y: 100 }, 0);
+            .to(".right-leaf", {y: 200}, 0)
+            .to(".left-leaf", {y: -200}, 0)
+            .to(".arrow", {y: 100}, 0);
 
         const startValue = isMobile ? "top 50%" : "center 60%";
         const endValue = isMobile ? "120% top" : "bottom top";
@@ -93,7 +93,7 @@ const Hero = () => {
                         <div className="space-y-5 hidden md:block">
                             <p>Cool. Crisp. Classic.</p>
                             <p className="subtitle">
-                                Sip the Spirit <br /> of Summer
+                                Sip the Spirit <br/> of Summer
                             </p>
                         </div>
 
